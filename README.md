@@ -36,4 +36,3 @@ Array Elements:
 34 7 88 12 95 3 22 56 71 18 
 
 The count of even numbers is: 6
-نبب
