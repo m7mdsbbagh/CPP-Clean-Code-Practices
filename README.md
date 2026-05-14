@@ -1,91 +1,94 @@
-# 🎲 Random Array Even Number Counter
+# 🧠 Logic-Craft: CPP & Python
 
-![C++](https://img.shields.io/badge/Language-C%2B%2B-blue?style=flat-square&logo=c%2B%2B)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=flat-square)
-![Level](https://img.shields.io/badge/Level-Beginner-orange?style=flat-square)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
+![Level](https://img.shields.io/badge/Level-Beginner%20→%20Growing-orange?style=flat-square)
 ![Year](https://img.shields.io/badge/Year-1st%20Year-purple?style=flat-square)
 
-> A simple C++ console program that generates a random array and counts how many even numbers are in it — built as part of my first-year programming journey.
+> A dual-language repository where the same logic problems are solved in both **C++** and **Python** — built to strengthen programming fundamentals and explore how different languages approach the same challenges.
 
 ---
 
-## 📌 About The Project
+## 📌 About This Repository
 
-This project was one of my early exercises in understanding **arrays**, **functions**, and **random number generation** in C++.
+This repo is part of my first-year CS journey. The idea is simple: take a programming concept, implement it in C++, then implement the same idea in Python — and see how each language handles it differently.
 
-The program:
-- Asks the user to enter how many elements they want (between 1 and 100)
-- Fills an array with random numbers from 1 to 100
-- Displays the array
-- Counts and shows how many numbers are even
-
-It also uses a **function pointer** (`bool (*condition)(int)`) to make the counter reusable for any condition — a concept I was just starting to learn!
+Each project lives in its own folder with two versions:
+- `CPP_Version/` — the original C++ implementation
+- `Python_Version/` — the Python reimagining with improvements
 
 ---
 
-## 🚀 How It Works
+## 📂 Repository Structure
 
 ```
-Enter number of elements (1 - 100): 10
-
-Array Elements:
-23 88 45 12 67 34 90 11 56 77
-
-The count of even numbers is: 4
+📁 Logic-Craft-CPP-Python/
+│
+└── 📁 GenericConditionCounter/
+    ├── 📁 CPP_Version/
+    │   └── 📄 GenericConditionCounter.cpp
+    └── 📁 Python_Version/
+        └── 📄 GenericConditionCounter.py
 ```
 
 ---
 
-## 🛠️ Features
+## 🚀 Projects
 
-| Feature | Description |
-|--------|-------------|
-| 🔢 Input Validation | Keeps asking until the user enters a valid range |
-| 🎲 Random Generation | Fills array with random numbers using `rand()` and `srand()` |
-| 🔍 Condition Counter | Uses a function pointer to count elements by any condition |
-| 📋 Array Printer | Displays all array elements in one line |
+### 🔢 Generic Condition Counter
 
----
+> Count elements in a collection based on any condition — using function pointers in C++ and first-class functions in Python.
 
-## 📂 File Structure
+| | C++ Version | Python Version |
+|---|---|---|
+| **Input** | Random array (1–100 elements) | User fills list manually until "stop" |
+| **Logic** | `bool (*condition)(int)` function pointer | Lambda / function passed directly |
+| **Output** | Count of even numbers | Even & odd lists printed separately |
+| **Extra** | `rand()` + `srand()` for randomness | Full input validation with error handling |
 
-```
-📁 project/
-└── 📄 main.cpp       ← The entire program (single file)
-```
-
----
-
-## ⚙️ How To Run
-
-**Requirements:** Any C++ compiler (g++, MSVC, etc.)
-
+**C++ — How to run:**
 ```bash
-# Compile
-g++ main.cpp -o program
+g++ CPP_Version/GenericConditionCounter.cpp -o counter
+./counter
+```
 
-# Run
-./program
+**Python — How to run:**
+```bash
+python Python_Version/GenericConditionCounter.py
 ```
 
 ---
 
-## 🧠 What I Learned
+## 💡 Key Concepts Covered
 
-- Declaring and using **arrays** in C++
-- Writing and calling **custom functions**
-- Using **`rand()` and `srand()`** for random numbers
-- Validating user input with a **`do-while` loop**
-- My first experience with **function pointers**
+| Concept | C++ | Python |
+|---|---|---|
+| Arrays / Collections | Fixed-size arrays | Dynamic lists |
+| Higher-order functions | Function pointers | First-class functions |
+| Input validation | `do-while` loop | `try/except` + loop |
+| Random generation | `rand()` / `srand()` | *(user input instead)* |
+| Error handling | Basic range check | Catches non-integer input |
 
 ---
 
-## 🌱 What I'd Improve Later
+## 🧠 What I'm Learning
 
-- [ ] Use `std::vector` instead of a fixed-size array
-- [ ] Add support for counting odd numbers too
-- [ ] Use `std::mt19937` for better randomness
-- [ ] Add input error handling for non-integer input
+- How the **same logic** can be expressed differently across languages
+- The power of **higher-order functions** (function pointers in C++, callables in Python)
+- Writing **clean, reusable functions** instead of monolithic code
+- **Input validation** and **error handling** in both languages
+- Thinking in **data structures**: arrays vs. lists
+
+---
+
+## 🌱 What's Coming Next
+
+- [ ] Add more problems (sorting, searching, string manipulation)
+- [ ] Add `README.md` inside each project folder with deeper explanation
+- [ ] Use `std::vector` in C++ versions
+- [ ] Explore `std::mt19937` for better randomness in C++
+- [ ] Write unit tests for the Python versions
 
 ---
 
@@ -96,4 +99,4 @@ g++ main.cpp -o program
 
 ---
 
-*This is one of my early programming projects. I'm still learning, and every line of code is a step forward! 💪*
+*Every problem solved in two languages is twice the understanding. Still learning, always building. 💪*
